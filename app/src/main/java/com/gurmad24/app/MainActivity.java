@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
         setContentView(webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
-        webView.getSettings().setAllowFileAccess(true);
+        webView.getSettings().setAllowFileAccess(false); // bundled assets (file:///android_asset) do not need file access
         webView.getSettings().setAllowContentAccess(false);
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient() {
